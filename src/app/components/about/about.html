@@ -1,0 +1,56 @@
+<section id="about" class="about">
+
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-container">
+
+    <!-- 🔥 LEFT SIDE -->
+    <div class="about-left glass-card">
+
+      <h3 class="highlight">Full Stack Developer & AI Enthusiast</h3>
+
+      <p>
+        I am a <span>B.Tech Computer Science student (2026)</span> with strong
+        expertise in <span>Full Stack Development</span> and <span>Data Science</span>.
+      </p>
+
+      <p>
+        I build scalable applications using <span>Angular, ASP.NET Core</span>
+        and create intelligent systems with <span>Machine Learning & AI</span>.
+      </p>
+
+      <p>
+        My goal is to design <span>high-performance</span>, visually engaging
+        applications that deliver real-world impact.
+      </p>
+
+      <!-- 🔥 TAGS -->
+      <div class="tags">
+        <span>Angular</span>
+        <span>Flutter</span>
+        <span>ASP.NET</span>
+        <span>Machine Learning</span>
+        <span>REST APIs</span>
+      </div>
+
+    </div>
+
+    <!-- 🔥 RIGHT SIDE -->
+    <div class="about-right glass-card">
+
+      <div class="skill" *ngFor="let skill of skills">
+        <div class="skill-header">
+          <span>{{ skill.name }}</span>
+          <span>{{ skill.level }}%</span>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar" [attr.data-progress]="skill.level"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,104 @@
+.footer {
+  margin-top: 80px;
+  padding: 50px 10%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid var(--glass-border);
+}
+
+/* 🔥 Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* 🔥 Left */
+.footer-left {
+  h3 {
+    color: var(--accent);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+}
+
+/* 🔥 Socials */
+.socials {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  a, button {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+
+    transition: 0.3s;
+  }
+
+  a:hover,
+  button:hover {
+    color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+    transform: translateY(-3px);
+  }
+}
+
+/* 🔥 Bottom */
+copyright, .copyright {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* 🔥 Toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: var(--accent);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  box-shadow: 0 0 15px var(--accent-glow);
+
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}

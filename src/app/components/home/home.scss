@@ -1,0 +1,74 @@
+/* 🔥 Host */
+:host {
+  display: block;
+}
+
+/* 🔥 Main Container */
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 🔥 GLOBAL SECTION CONTROL */
+section {
+  position: relative;
+
+  padding: 60px 10%;        /* ✅ perfect spacing */
+  margin: 0;
+  min-height: auto;
+
+  scroll-margin-top: 90px;  /* ✅ navbar offset */
+}
+
+/* 🔥 HERO (no top gap) */
+#hero {
+  padding: 0;
+}
+
+/* 🔥 GAP BETWEEN SECTIONS */
+section + section {
+  margin-top: 20px;
+}
+
+/* 🔥 TITLE SPACING */
+.section-title {
+  margin-bottom: 30px;
+}
+
+/* 🔥 FIX NAVBAR OVERLAP */
+body {
+  padding-top: 80px; /* navbar height */
+}
+
+/* 📱 TABLET */
+@media (max-width: 992px) {
+  section {
+    padding: 50px 6%;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+
+  section + section {
+    margin-top: 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+/* 📱 SMALL MOBILE */
+@media (max-width: 480px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Akash Satpute</h3>
+      <p><strong>Tech Stack:</strong> Angular | .NET | SQL | Flutter | Python | Git</p>
+    </div>
+
+
+    <div class="socials">
+      <a href="https://github.com/akshuu17" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/akash-satpute-8805271571s" target="_blank">LinkedIn</a>
+      <a href="https://youtube.com/@17_snapshots" target="_blank">YouTube</a>
+      <button (click)="copyEmail()">Copy Email</button>
+    </div>
+
+  </div>
+
+  <div class="cta">
+    <p>Let’s build something amazing together 🚀</p>
+  </div>
+
+  <p class="copyright">
+    © 2026 Akash Satpute. All rights reserved.
+  </p>
+
+  <div class="toast" *ngIf="showToast">
+    Email copied 🚀
+  </div>
+
+</footer>

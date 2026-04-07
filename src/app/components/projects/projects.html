@@ -1,0 +1,41 @@
+<section id="projects" class="projects">
+
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div
+      class="project-card"
+      *ngFor="let project of projects"
+      (click)="openModal(project)"
+    >
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.desc }}</p>
+
+      <span class="tech">{{ project.tech }}</span>
+
+      <div class="card-hover">
+        <span>View Details →</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" *ngIf="selectedProject" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+      <h2>{{ selectedProject.title }}</h2>
+      <p>{{ selectedProject.desc }}</p>
+
+      <p class="tech">{{ selectedProject.tech }}</p>
+
+      <div class="modal-actions">
+        <button class="btn primary">Live Demo</button>
+        <button class="btn secondary">GitHub</button>
+      </div>
+
+    </div>
+  </div>
+
+</section>
