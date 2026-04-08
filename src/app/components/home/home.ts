@@ -7,6 +7,7 @@ import { ProjectsComponent } from '../projects/projects';
 import { SkillsComponent } from '../skills/skills';
 import { ExperienceComponent } from '../experience/experience';
 import { ContactComponent } from '../contact/contact';
+import { CertificationsComponent } from '../certifications/certifications';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ import { ContactComponent } from '../contact/contact';
     ProjectsComponent,
     SkillsComponent,
     ExperienceComponent,
+    CertificationsComponent,
     ContactComponent
   ],
   template: `
@@ -44,6 +46,10 @@ import { ContactComponent } from '../contact/contact';
 
       <section id="experience">
         <app-experience></app-experience>
+      </section>
+
+      <section id="certifications">
+        <app-certifications></app-certifications>
       </section>
 
       <section id="contact">

@@ -21,18 +21,34 @@
 
   </div>
 
-  <!-- MODAL -->
+  <!-- 🔥 MODAL -->
   <div class="modal" *ngIf="selectedProject" (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
 
       <h2>{{ selectedProject.title }}</h2>
       <p>{{ selectedProject.desc }}</p>
-
       <p class="tech">{{ selectedProject.tech }}</p>
 
       <div class="modal-actions">
-        <button class="btn primary">Live Demo</button>
-        <button class="btn secondary">GitHub</button>
+
+        <!-- ✅ ONLY if LIVE exists -->
+        <button
+          class="btn primary"
+          *ngIf="selectedProject?.live"
+          (click)="openLink(selectedProject.live)"
+        >
+          Live Demo
+        </button>
+
+        <!-- ✅ ONLY if GITHUB exists -->
+        <button
+          class="btn secondary"
+          *ngIf="selectedProject?.github"
+          (click)="openLink(selectedProject.github)"
+        >
+          GitHub
+        </button>
+
       </div>
 
     </div>

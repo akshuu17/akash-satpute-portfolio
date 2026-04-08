@@ -1,0 +1,35 @@
+<div class="certifications">
+
+  <h2 class="section-title">Certifications & Achievements</h2>
+
+  <!-- CERTIFICATIONS -->
+  <div class="cert-grid">
+
+    <div class="cert-card" *ngFor="let cert of certifications">
+      <h3>{{ cert.title }}</h3>
+      <p>{{ cert.issuer }}</p>
+      <span>{{ cert.date }}</span>
+
+      <button (click)="openLink(cert.link)">
+        View Credential →
+      </button>
+    </div>
+
+  </div>
+
+  <!-- BADGES -->
+  <h3 class="sub-title">Google Cloud Skill Badges</h3>
+
+  <div class="badge-grid">
+
+    <div
+      class="badge-card"
+      *ngFor="let badge of badges"
+      (click)="openLink(badge.link)"
+    >
+      🏆 {{ badge.name }}
+    </div>
+
+  </div>
+
+</div>

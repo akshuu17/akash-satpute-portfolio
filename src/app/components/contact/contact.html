@@ -2,9 +2,12 @@
 
   <h2 class="section-title">Contact Me</h2>
 
-  <div class="contact-container">
+  <div class="contact-wrapper">
 
-    <form (submit)="onSubmit($event)" class="glass-card">
+    <!-- 🔥 LEFT: FORM -->
+    <form (submit)="onSubmit($event)" class="contact-form glass-card">
+
+      <h3>Send Message</h3>
 
       <div class="input-group">
         <input type="text" required />
@@ -25,18 +28,25 @@
 
     </form>
 
-    <!-- 🔥 Social -->
-    <div class="socials">
-      <a href="https://github.com/akshuu17" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/akash-satpute-8805271571s" target="_blank">LinkedIn</a>
-      <a href="https://youtube.com/@17_snapshots" target="_blank">YouTube</a>
+    <!-- 🔥 RIGHT: CONTACT INFO -->
+    <div class="contact-info glass-card">
+
+      <h3>Get in Touch</h3>
+      <p>Feel free to connect with me through social platforms 👇</p>
+
+      <div class="socials">
+        <a href="https://github.com/akshuu17" target="_blank">🐙 GitHub</a>
+        <a href="https://www.linkedin.com/in/akash-satpute-8805271571s" target="_blank">💼 LinkedIn</a>
+        <a href="https://youtube.com/@17_snapshots" target="_blank">📺 YouTube</a>
+      </div>
+
     </div>
 
   </div>
 
-  <!-- Toast -->
+  <!-- 🔥 Toast -->
   <div class="toast" *ngIf="showToast">
-    🚧 website under maintenance 🚧
+    🚧 Website under maintenance 🚧
   </div>
 
 </section>
